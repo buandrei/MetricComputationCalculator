@@ -14,9 +14,10 @@ public class CalculatorTest {
         calculator = new Calculator();
     }
 
+
     @Test(expected = ValidationException.class)
     public void testWhenInputIsWrong() throws ValidationException {
-        String expresie = "10 mmA + 1 mm";
+        String expresie = "10 @! + 1 mm";
         String marimeDorita = "cm";
         calculator.calculate(expresie, marimeDorita);
         fail("should have thrown validation exception");
